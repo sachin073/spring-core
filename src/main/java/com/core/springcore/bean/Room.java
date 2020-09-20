@@ -5,9 +5,11 @@ import javax.annotation.PreDestroy;
 
 import org.springframework.stereotype.Component;
 
-@Component("component-bean-object")
+@Component("room-bean-object")
 public class Room {
 
+	private String name="room-no-101";
+	
 	@Override
 	public String toString() {
 		return "hello from Room instance";
@@ -21,6 +23,15 @@ public class Room {
 	@PreDestroy
 	public void destroy() {
 		System.out.println("Room bean destroyed");
+	}
+
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 }

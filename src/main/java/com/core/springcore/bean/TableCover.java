@@ -11,9 +11,11 @@ import org.springframework.stereotype.Component;
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class TableCover {
 
+	
+	
 	@Override
 	public String toString() {
-		return "hello from Room instance";
+		return "hello from table cover number = "+this.hashCode();
 	}
 
 	@PostConstruct
